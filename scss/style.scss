@@ -1,0 +1,201 @@
+@import "_reset.scss";
+@import "_media";
+$primary-color:#FFD366;
+$background-color:#090f44;
+$text:#090f44;
+
+body {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif, 'PingFangTC-Regular', '微軟正黑體';
+}
+
+.wrap {
+  width: 960px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+
+  @include phone {
+    width: 100%;
+    display: block;
+  }
+}
+
+.header {
+  width: 100%;
+  height: 250px;
+  background-color: $background-color;
+  display: flex;
+  align-items: center;
+
+  @include phone {
+    width: 100%;
+    height: auto;
+  }
+
+  .index {
+    img {
+      width: 117px;
+      height: 117px;
+
+      @include phone {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+    }
+  }
+
+  .inputBtnGroup {
+    text-align: left;
+
+    @include phone {
+      text-align: center;
+    }
+
+    .inputGroup {
+      color: $primary-color;
+
+      p {
+        font-size: 18px;
+        padding: 10px 0;
+
+
+      }
+
+      input {
+        width: 350px;
+        height: 40px;
+        padding-left: 12px;
+        font-size: 20px;
+        border-radius: 10px;
+        border: 2px solid $primary-color;
+        outline: none;
+        background-color: $background-color;
+        color: #fff;
+      }
+    }
+  }
+
+  .calculatorBMI,
+  .show {
+    outline: none;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+  }
+
+  .calculatorBMI {
+    background-color: $primary-color;
+    color: $text;
+
+    @include phone {
+      margin: 20px auto;
+    }
+
+    &:hover {
+      background: darken($primary-color, 10%);
+      transition: all 1s ease;
+    }
+  }
+}
+
+
+.main {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    margin: 20px auto;
+    color: $background-color;
+    font-size: 20px;
+  }
+
+  .wrap {
+    .bmiRecordList {
+      font-size: 24px;
+      display: block;
+      width: 100%;
+      height: 100%;
+
+
+
+      li {
+        margin-bottom: 20px;
+        box-shadow: 0 0 3px 2px #c9c9c9;
+        border-radius: 6px;
+
+        @include phone {
+          display: flex;
+          justify-content: start;
+          flex-direction: column;
+          margin: 0 10px;
+        }
+
+      }
+
+      .BMIStatus {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        color: $text;
+      }
+
+      .text {
+        font-size: 12px;
+        margin-right: 3px;
+      }
+    }
+
+    .fas {
+      color: #ee7171;
+
+      &:hover {
+        color: darken(#ee7171, 20%);
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $background-color;
+  margin-top: auto;
+  border-top: 7px solid #c0c0c0;
+
+
+
+  p {
+    font-size: 12px;
+    color: $primary-color;
+
+    @include phone {
+      text-align: center;
+    }
+
+  }
+}
