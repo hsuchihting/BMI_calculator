@@ -16,6 +16,10 @@ body {
   justify-content: space-around;
   margin: 0 auto;
 
+  @include pad {
+    width: 100%;
+  }
+
   @include phone {
     width: 100%;
     display: block;
@@ -75,12 +79,17 @@ body {
         outline: none;
         background-color: $background-color;
         color: #fff;
+
+        @include phone {
+          margin-right: 1%;
+          margin-left: 1%;
+          width: 85%;
+        }
       }
     }
   }
 
-  .calculatorBMI,
-  .show {
+  .calculatorBMI {
     outline: none;
     font-size: 24px;
     text-decoration: none;
@@ -91,10 +100,6 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-
-  }
-
-  .calculatorBMI {
     background-color: $primary-color;
     color: $text;
 
@@ -132,12 +137,15 @@ body {
       width: 100%;
       height: 100%;
 
-
-
       li {
         margin-bottom: 20px;
         box-shadow: 0 0 3px 2px #c9c9c9;
         border-radius: 6px;
+
+        @include pad {
+          width: 80%;
+          margin: 10px auto;
+        }
 
         @include phone {
           display: flex;
@@ -145,7 +153,6 @@ body {
           flex-direction: column;
           margin: 0 10px;
         }
-
       }
 
       .BMIStatus {
@@ -154,6 +161,17 @@ body {
         align-items: center;
         padding: 10px;
         color: $text;
+
+        @include pad {
+          width: 90%;
+        }
+
+        @include phone {
+          padding: 5px;
+          display: flex;
+        justify-content: center;
+        align-items: center;
+        }
       }
 
       .text {
