@@ -105,6 +105,10 @@ body {
 
     @include phone {
       margin: 20px auto;
+      border-radius: 6px;
+      width: 90%;
+      height: auto;
+      padding: 20px 0;
     }
 
     &:hover {
@@ -169,8 +173,8 @@ body {
         @include phone {
           padding: 5px;
           display: flex;
-        justify-content: center;
-        align-items: center;
+          justify-content: center;
+          align-items: center;
         }
       }
 
@@ -205,15 +209,16 @@ body {
   margin-top: auto;
   border-top: 7px solid #c0c0c0;
 
+  @include phone {
+    display: none;
+  }
 
 
   p {
     font-size: 12px;
     color: $primary-color;
 
-    @include phone {
-      text-align: center;
-    }
+
 
   }
 }
