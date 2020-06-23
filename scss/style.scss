@@ -44,11 +44,23 @@ body {
       height: 117px;
 
       @include phone {
-        display: block;
-        text-align: center;
-        margin: 0 auto;
-        padding: 20px 0;
+        display: none;
       }
+    }
+  }
+
+  .indexRWD {
+    display: none;
+
+    @include pad {
+      display: none;
+    }
+
+    @include phone {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      padding: 10px 0;
     }
   }
 
@@ -65,8 +77,6 @@ body {
       p {
         font-size: 18px;
         padding: 10px 0;
-
-
       }
 
       input {
@@ -84,6 +94,8 @@ body {
           margin-right: 1%;
           margin-left: 1%;
           width: 85%;
+          height: 30px;
+          border-radius: 6px;
         }
       }
     }
@@ -193,8 +205,6 @@ body {
       }
     }
   }
-
-
 }
 
 .footer {
@@ -213,12 +223,8 @@ body {
     display: none;
   }
 
-
   p {
     font-size: 12px;
     color: $primary-color;
-
-
-
   }
 }
